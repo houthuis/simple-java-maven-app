@@ -14,6 +14,14 @@ public class App
         System.out.println(new App().getMessage());
     }
 
+    private void doNothing () {
+        //do Nothing
+    }
+
+    private void doMoreNothing () {
+        //do Nothing
+    }
+
     private final String getMessage() {
         return message;
     }
