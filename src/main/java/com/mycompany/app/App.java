@@ -18,6 +18,10 @@ public class App
         //do Nothing
     }
 
+    private void doMoreNothing () {
+        //do Nothing
+    }
+
     private final String getMessage() {
         return message;
     }
