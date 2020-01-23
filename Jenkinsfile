@@ -21,9 +21,14 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') {
+        stage('Deliver for development') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh './jenkins/scripts/deliver_dev.sh'
+            }
+        }
+        stage('Deliver for production') {
+            steps {
+                sh './jenkins/scripts/deliver_prod.sh'
             }
         }
     }
