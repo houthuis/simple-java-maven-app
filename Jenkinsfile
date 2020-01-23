@@ -22,11 +22,17 @@ pipeline {
             }
         }
         stage('Deliver for development') {
+            when {
+                branch 'dev'
+            }
             steps {
                 sh './jenkins/scripts/deliver_dev.sh'
             }
         }
         stage('Deliver for production') {
+            when {
+                branch 'prod'
+            }
             steps {
                 sh './jenkins/scripts/deliver_prod.sh'
             }
